@@ -32,7 +32,7 @@ export default function UploadForm({ user, onUpload }) {
 
     console.log("user.id utilisé pour user_id :", user.id);
     await supabase.from("images").insert([
-      { user_id: user.id, path: filePath }
+      { user_id: user.id, url: filePath }
     ]);
 
     setFile(null);
